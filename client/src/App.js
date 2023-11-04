@@ -1,0 +1,26 @@
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import LoginPage from "./LoginPage";
+import KakaoRedirectPage from "./KakaoRedirectPage";
+import React from "react";
+const App = () => {
+    const handleKakaoLoginClick = () => {
+        window.location.href = 'http://localhost:8080/oauth/kakao';
+    };
+    return (
+        <div className='App'>
+
+            <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100vh' }}>
+                <div>
+                    <button
+                        onClick={handleKakaoLoginClick}
+                        style={{ padding: '10px 20px', fontSize: '18px', borderRadius: '5px', cursor: 'pointer', marginRight: '10px' }}
+                    >
+                        카카오톡 로그인
+                    </button>
+                </div>
+            </div>
+        </div>
+    );
+};
+
+export default App;
